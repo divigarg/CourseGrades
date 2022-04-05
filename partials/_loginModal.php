@@ -1,4 +1,5 @@
 <!-- Modal -->
+<script src="javascript/login.js"></script>
 
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -7,7 +8,12 @@
                 <h5 class="modal-title" id="loginModalLabel">Login to CourseGrades!</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="partials/_handleLogin.php" method="post">
+
+            <div class="alert alert-danger" id="loginAlert" role="alert" hidden>
+            </div>
+
+
+            <form>
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="loginUsername" class="form-label">Username</label>
@@ -18,7 +24,7 @@
                         <label for="loginPassword" class="form-label">Password</label>
                         <input type="password" maxlength="255" class="form-control" id="loginPassword"  name="loginPassword">
                     </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="button" onclick="loginProcess(document.getElementById('loginUsername'), document.getElementById('loginPassword'))" class="btn btn-primary">Login</button>
                 </div>
             </form>
         </div>
