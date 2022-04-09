@@ -1,5 +1,12 @@
 <!-- Modal -->
 <script src="javascript/gradelist.js"></script>
+<script src="javascript/submitButton_my_courses.js"></script>
+
+<script>
+$('#addNewTSModal').on('hidden.bs.modal', function () {
+    $(this).find('form').trigger('reset');
+})
+</script>
 
 <div class="modal fade" id="addNewTSModal" tabindex="-1" aria-labelledby="addNewTSModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -9,8 +16,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <!-- <div class="alert alert-danger" id="loginAlert" role="alert" hidden> -->
-            <!-- </div> -->
+            <div class="alert alert-danger" id="TSAlert" role="alert" hidden>
+            </div>
 
 
             <form>
@@ -47,7 +54,7 @@
                     </div>
                     <input type="hidden" value="0" id="total_grades" name="total_grades">
 
-                    <button type="button" onclick="submitForm()" class="btn my-2 btn-primary">Submit</button>
+                    <button type="button" id="submitButton" class="btn my-2 btn-primary">Submit</button>
                 </div>
             </form>
         </div>

@@ -35,6 +35,7 @@
       });
     });
   </script>
+
   <!-- Bootstrap CSS -->
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -48,9 +49,8 @@
   require 'partials/_addnewtsession.php';
   ?>
 
-
   <div class="container my-4">
-    <button class="btn me-2 btn-success" data-bs-toggle="modal" data-bs-target="#addNewTSModal">Add New Teaching Session </button>
+    <button class="btn me-2 btn-success" onclick="addNewCourse()">Add New Teaching Session </button>
   </div>
 
   <div class="container my-4">
