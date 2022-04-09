@@ -14,7 +14,15 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             session_start();
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $row['username'];
-            $_SESSION['teacherId'] = $row['teacher_id'];
+            if($row['access_level'] == 'admin'){
+                $_SESSION['isteacher'] = false;
+                $_SESSION['isadmin'] = true;
+            }
+            else{
+                $_SESSION['isteacher'] = true;
+                $_SESSION['isadmin'] = false;
+                $_SESSION['teacherId'] = $row['teacher_id'];
+            }
             // header("location: ../index.php");
             // exit();
             

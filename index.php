@@ -1,4 +1,6 @@
 <?php
+
+
 $showSignupSuccess = false;
 $showSignupfailure = false;
 $message = "";
